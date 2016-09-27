@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +17,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="连续滚动" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQl-0X-YrU">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3cw-04-tWv" customClass="MyScrollTextView">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="f9h-qu-1rR"/>
+                                    <constraint firstAttribute="height" constant="30" id="tVa-cI-hIE"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="间隔滚动" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ct-8A-tGG">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2D-84-MmS" customClass="MyScrollTextView">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Rwv-sB-05X"/>
+                                    <constraint firstAttribute="height" constant="30" id="SIK-7V-wSz"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="往复滚动" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYe-Y4-hpU">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8A-G3-2hp" customClass="MyScrollTextView">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Wsa-Z8-9Al"/>
+                                    <constraint firstAttribute="height" constant="30" id="etX-QV-ytl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8ct-8A-tGG" firstAttribute="top" secondItem="3cw-04-tWv" secondAttribute="bottom" constant="50" id="5vn-uw-9bJ"/>
+                            <constraint firstItem="8ct-8A-tGG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BCd-xn-Y5b"/>
+                            <constraint firstItem="sQl-0X-YrU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="HcN-hv-uvl"/>
+                            <constraint firstItem="H2D-84-MmS" firstAttribute="top" secondItem="8ct-8A-tGG" secondAttribute="bottom" constant="20" id="RUL-en-eqt"/>
+                            <constraint firstItem="i8A-G3-2hp" firstAttribute="top" secondItem="CYe-Y4-hpU" secondAttribute="bottom" constant="20" id="RzL-nV-eex"/>
+                            <constraint firstItem="3cw-04-tWv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TTg-dx-jR2"/>
+                            <constraint firstItem="H2D-84-MmS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vv5-hn-itR"/>
+                            <constraint firstItem="3cw-04-tWv" firstAttribute="top" secondItem="sQl-0X-YrU" secondAttribute="bottom" constant="20" id="elT-IL-Yzl"/>
+                            <constraint firstItem="sQl-0X-YrU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jle-fy-BnF"/>
+                            <constraint firstItem="CYe-Y4-hpU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kKI-uU-akf"/>
+                            <constraint firstItem="CYe-Y4-hpU" firstAttribute="top" secondItem="H2D-84-MmS" secondAttribute="bottom" constant="50" id="nZi-Eb-gDD"/>
+                            <constraint firstItem="i8A-G3-2hp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sSJ-7m-cJF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ContinuousScrollTextView" destination="3cw-04-tWv" id="0Zf-FS-oGU"/>
+                        <outlet property="RoundScrollTextView" destination="i8A-G3-2hp" id="M9G-6R-XQ9"/>
+                        <outlet property="SpaceScrollTextView" destination="H2D-84-MmS" id="uWG-XA-uNJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
